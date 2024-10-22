@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <!-- logo-->
+            <a href="#" class="logo"><img src="./IMG/Logo.png" alt="Logo pagina"></a>
+            
+            <!-- menu -->
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="./IMG/menu.png" class="menu-icono">
+            </label>
+            
+            <!-- navbar -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#agregar">Agregar</a></li>
+                    <li><a href="#prioridades">Prioridades</a></li>
+                    <li><a href="#Realizadas">Realizadas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="agregar">
+        
+        <div class="contenedor">
+            <input type="text" placeholder="Agregue una tarea">
+        
+        
+            <input type="checkbox" id="menuToggle" style="display: none;">
+            <label for="menuToggle" class="btnAgregar">AGREGAR A</label>
+            <ul class="menuOpciones">
+                <li><a href="#" class="alta">Prioridad Alta</a></li>
+                <li><a href="#" class="media">Prioridad Media</a></li>
+                <li><a href="#" class="baja">Prioridad Baja</a></li>
+            </ul>
+        </div>
+    </section>
+
+<!-- categorias -->
+<section id="prioridades">
+    <!-- alta -->
+    <div class="contenedor-alta">
+        <input type="checkbox" id="toggle-alta" style="display: none;"> <!-- agrego esto aca para mayor prioridad -->
+        <label for="toggle-alta">
+            <h2>ALTA</h2>
+        </label>
+        <div class="contenido">
+            <p>Tarea 1</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 2</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 3</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- media -->
+    <div class="contenedor-media">
+        <input type="checkbox" id="toggle-media" style="display: none;">
+        <label for="toggle-media">
+            <h2>MEDIA</h2>
+        </label>
+        <div class="contenido">
+            <p>Tarea 1</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 2</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 3</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- baja -->
+    <div class="contenedor-baja">
+        <input type="checkbox" id="toggle-baja" style="display: none;">
+        <label for="toggle-baja">
+            <h2>BAJA</h2>
+        </label>
+        <div class="contenido">
+            <p>Tarea 1</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 2</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+
+            <p>Tarea 3</p>
+            <div class="estado-tarea">
+                <label><input type="checkbox"> En Progreso</label>
+                <label><input type="checkbox"> Completado</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Realizadas">
+    <div class="contenedor-realizadas">
+        <input type="checkbox" id="toggle-realizadas" style="display: none;">
+        <label for="toggle-realizadas">
+            <h2>REALIZADAS</h2>
+        </label>
+        <div class="contenido">
+            <p>Tarea 1</p>
+            <p>Tarea 2</p>
+            <p>Tarea 3</p>
+        </div>
+    </div>
+</section>
+
+    <!-- pie de pagina -->
+    <footer class="pie" id="pie">
+
+        <div class="contenedor">
+            <p>&copy; To-Do List 2024</p>
+        </div>
+
+    </footer>    
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+/* Estilo general */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('./IMG/fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.8em; text-align: center;}
+h3{ font-size: 2em;}
+h4{ font-size: 1.8em;}
+p{ font-size: 1.25em;}
+
+
+button{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    background-color: #fffbe8;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    font-weight: bolder;
+}
+
+
+/* Header */
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: #fffbe8;
+    position:relative;
+        width: 100%;
+}
+header .contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo img{
+    width: 150px;
+    padding: 10px 15px;
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.menu-icono{
+    width: 50px;
+    cursor: pointer;
+}
+#menu{
+    display: none;
+}
+#menu:checked ~ .navbar{
+    display: block;
+    max-height: 300px;
+}
+
+/* Navbar */
+.navbar{
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fffbe8;
+    transition: max-height 0.5s ease-in-out;
+}
+.navbar ul{
+    margin-top: 0;
+    background-color: #fffbe8;
+}
+.navbar ul li{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.navbar ul li a{
+    padding: 20px;
+    display: block;
+    color: #000000;
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    color: white;
+}
+
+/* Agregar */
+#agregar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 80vp;
+    
+    
+}
+#agregar input[type="text"] {
+    width: 80vp;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #a5a49c;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 10px;
+}
+.btnAgregar {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: #fffbe8;
+    cursor: pointer;
+}
+
+.btnAgregar:hover {
+    background-color: white;
+    font-weight: bolder;
+}
+
+/* Menú oculto */
+.menuOpciones {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+/* Mostrar menu */
+#menuToggle:checked + .btnAgregar + .menuOpciones {
+    display: block;
+}
+
+/* Estilo del menu */
+.menuOpciones li {
+    margin: 10px 0;
+}
+
+.menuOpciones li a {
+    font-size: 1.15em;
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menuOpciones li a.alta:hover {
+    background-color: red;
+}
+
+.menuOpciones li a.media:hover{
+    background-color: yellow;
+}
+
+.menuOpciones li a.baja:hover {
+    background-color: rgb(4, 229, 4);
+}
+
+/* Secciones de prioridad*/
+
+.contenedor-alta p {
+    text-align: center;  
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgba(255, 0, 0, 0.361); 
+    background-color: #fffbe898 ;
+}
+.contenedor-media p {
+    text-align: center;  
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgba(255, 234, 0, 0.457); 
+    background-color: #fffbe898 ;
+}
+.contenedor-baja p{
+    text-align: center;  
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgb(98, 255, 0); 
+    background-color: #fffbe898 ;
+}
+
+/* Ocultar y mostrar listado */
+.contenedor-alta .contenido,
+.contenedor-media .contenido,
+.contenedor-baja .contenido,
+.contenedor-realizadas .contenido {
+    display: none;
+}
+
+#toggle-alta:checked ~ .contenido,
+#toggle-media:checked ~ .contenido,
+#toggle-baja:checked ~ .contenido,
+#toggle-realizadas:checked ~ .contenido {
+    display: block;
+}
+ /* Color para diferenciar prioridades */
+.contenedor-alta, .contenedor-media, .contenedor-baja, .contenedor-realizadas {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.177);
+    border-radius: 15px;
+}
+
+/* Checkbox */
+.estado-tarea {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.estado-tarea label {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/*Realizadas*/
+.contenedor-realizadas p{
+    text-align: center;  
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgb(0, 0, 0); 
+    background-color: #fffbe898 ;
+}
+
+/*Footer*/
+.pie .contenedor{
+    
+    background-color: #d5cca0;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+
+
+
+@media (max-width: 466px) {
+    header {
+        height: auto;
+    }
+    .navbar ul li a{
+        font-size: 1.1rem;
+    }
+    h2{
+        font-size: 2em;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 600px) {
+    .estado-tarea label {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 945px) {
+    .logo img{
+        width: 180px;
+    }
+    header {
+        height: auto;
+    }
+    .navbar ul li a{
+        font-size: 1.35rem;
+    }
+}
+
+
+@media (min-width: 1140px) {
+    header {
+        width: 100%;
+        top: 0;
+    }
+
+    header .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .menu-icono {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff;
+        max-height: none;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .navbar ul {
+        display: flex; /* Hago que la lista este en una fila */
+        margin: 0;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li a {
+        padding: 20px;
+        display: block;
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    #prioridades {
+        display: flex; 
+        justify-content:space-evenly ;
+        margin: 20px 0;
+    }
+
+    .contenedor-alta .contenido,
+    .contenedor-media .contenido,
+    .contenedor-baja .contenido,
+    .contenedor-realizadas .contenido {
+        display: initial;
+    }
+
+    .contenedor-alta, .contenedor-media, .contenedor-baja {
+        background-color: #fffbe8c7;
+        flex: 1;
+    }
+    
+}
+
